@@ -31,6 +31,10 @@ header_pages:
 
 # Build settings
 theme: minima
+minima:
+  skin: classic
+  custom_css:
+    - /custom.css
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
