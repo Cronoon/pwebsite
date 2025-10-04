@@ -35,7 +35,7 @@ minima:
   skin: classic
   social_links:
     - name: "Instagram"
-      url: "https://instagram.com/@martina_oconnorart"
+      url: "https://instagram.com/martina_oconnorart"
   custom_css:
     - /custom.css
 plugins:
