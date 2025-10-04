@@ -1,9 +1,23 @@
-<ul class="social-media-list">
-{%- for entry in site.minima.social_links -%}
-  <li>
-    <a rel="me" href="{{ entry.url }}" target="_blank" title="{{ entry.title }}">
-      <span class="grey fa-brands fa-{{ entry.icon }} fa-lg"></span>
-    </a>
-  </li>
-{%- endfor -%}
+<ul class="social-links">
+  {%- for entry in site.minima.social_links -%}
+    <li>
+      <a href="{{ entry.url }}" target="_blank" rel="noopener">
+        {% assign name_lower = entry.name | downcase %}
+        {% if name_lower == "instagram" %}
+          <i class="fab fa-instagram"></i>
+        {% elsif name_lower == "twitter" %}
+          <i class="fab fa-twitter"></i>
+        {% elsif name_lower == "github" %}
+          <i class="fab fa-github"></i>
+        {% elsif name_lower == "linkedin" %}
+          <i class="fab fa-linkedin"></i>
+        {% elsif name_lower == "facebook" %}
+          <i class="fab fa-facebook"></i>
+        {% else %}
+          <i class="fas fa-link"></i>
+        {% endif %}
+        {{ entry.name }}
+      </a>
+    </li>
+  {%- endfor -%}
 </ul>
