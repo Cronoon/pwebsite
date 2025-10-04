@@ -6,6 +6,3 @@ layout: page
 title: Oil Paintings and Art Prints
 permalink: /
 ---
-# Welcome to My Prints Site
-
-This is my homepage content.
