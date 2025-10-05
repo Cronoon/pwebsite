@@ -1,10 +1,10 @@
 <ul class="social-links">
   {%- for entry in site.minima.social_links -%}
-    <li>
+    <li style="list-style: none;">
       <a href="{{ entry.url }}" target="_blank" rel="noopener">
         {% assign name_lower = entry.name | downcase %}
         {% if name_lower == "instagram" %}
-          <i class="fab fa-instagram"></i>
+          <i style="font-size:140%" class="fab fa-instagram"></i>
         {% elsif name_lower == "twitter" %}
           <i class="fab fa-twitter"></i>
         {% elsif name_lower == "github" %}
