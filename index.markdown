@@ -6,4 +6,10 @@ layout: page
 title: Oil Paintings and Art Prints
 permalink: /
 ---
-bbbbb
+<section class="product-list">
+  {% for product in site.data.products %}
+    {% include product_card.html product=product %}
+  {% endfor %}
+</section>
+
+<script src="{{ '/assets/js/cart.js' | relative_url }}"></script>bbb

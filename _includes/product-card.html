@@ -1,0 +1,13 @@
+<article class="product-card" data-product-id="{{ product.id }}" data-product-title="{{ product.title | escape }}" data-product-price="{{ product.price }}" data-product-currency="{{ product.currency }}" data-product-img="{{ product.img | relative_url }}">
+  <img src="{{ product.img | relative_url }}" alt="{{ product.title }}">
+  <h3>{{ product.title }}</h3>
+  <p class="desc">{{ product.description }}</p>
+  <p class="price">{{ product.currency }} {{ product.price | number_with_precision: 2 }}</p>
+  <div class="product-actions">
+    <label>
+      Qty
+      <input type="number" class="qty" value="1" min="1" style="width:60px;">
+    </label>
+    <button class="add-to-cart">Add to cart</button>
+  </div>
+</article>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Sheet as Backend</title>
+</head>
+<body>
+  <h1>Data from Google Sheet</h1>
+  <ul id="list"></ul>
+
+  <script>
+    // Replace with your published CSV link
+    const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSHCtgyWXTQbajiMXfFxdqHyGfCReHsHW7TPlHZcpeImUfsIyCf34N_uG4u0AO7X6j-l3mU5ChEXoZQ/pub?output=csv";
+
+    fetch(sheetUrl)
+      .then(res => res.text())
+      .then(data => {
+        const rows = data.split("\n").map(r => r.split(","));
+        const list = document.getElementById("list");
+
+        rows.forEach(row => {
+          const li = document.createElement("li");
+          li.textContent = row.join(" | ");
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>

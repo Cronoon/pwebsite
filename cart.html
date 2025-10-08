@@ -1,0 +1,20 @@
+---
+layout: default
+title: Cart
+permalink: /cart.html
+---
+
+<h1>Your Cart</h1>
+<div id="cart-container"></div>
+
+<script src="{{ '/assets/js/cart.js' | relative_url }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('cart-container');
+    window.JekyllCart.renderCartPage(container);
+    // Update if cart updates elsewhere
+    document.addEventListener('cart:updated', () => {
+      window.JekyllCart.renderCartPage(container);
+    });
+  });
+</script>

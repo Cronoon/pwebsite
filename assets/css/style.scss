@@ -11,3 +11,12 @@
 .site-nav {
   display: none !important;
 }
+.product-card { border:1px solid #eee; padding:12px; margin:8px; display:inline-block; width: 260px; vertical-align: top; }
+.product-card img { max-width:100%; height:auto; display:block; margin-bottom:8px; }
+.product-actions { margin-top:8px; }
+.cart-table { width:100%; border-collapse:collapse; margin-bottom:12px; }
+.cart-table th, .cart-table td { border:1px solid #ddd; padding:8px; text-align:left; vertical-align:middle; }
+.cart-product { display:flex; gap:8px; align-items:center; }
+.cart-summary { margin-top:12px; }
+
+
